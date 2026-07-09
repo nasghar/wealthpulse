@@ -4,6 +4,9 @@ import { getAnalystConfig, analystUrl, authHeaders } from '@/lib/analyst';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+// Give the streaming co-pilot room to think+stream without being cut off.
+// Hobby caps at 60s; Pro allows up to 300 (raise this if on Pro).
+export const maxDuration = 60;
 
 // Pass-through proxy for Aura Analyst's streaming chat (SSE). Keeps the Bearer key
 // server-side and streams the upstream event stream straight to the browser.

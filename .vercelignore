@@ -1,0 +1,6 @@
+# Never upload local secret files to Vercel (set these as env vars instead).
+.dbcreds.json
+.analyst.json
+.env
+.env.*
+.claude/settings.local.json

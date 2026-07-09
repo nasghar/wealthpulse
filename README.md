@@ -81,6 +81,20 @@ Both `.dbcreds.json` and `.analyst.json` are **gitignored** — no secrets are e
 committed. To deploy this to an always-on host, see **[DEPLOY.md](DEPLOY.md)**
 (cloud hosts read the same values from env vars — see [`.env.example`](.env.example)).
 
+### Hosted mode (Vercel): in-app simulation + password gate
+Two features make this deployable as a locked-down, always-on demo — both are
+**off by default** so local dev is unchanged:
+
+- **In-UI market simulation** — a bottom-left **"Simulate"** control that (optionally)
+  wipes old history and ticks the market from the browser via `/api/sim/tick`, so
+  no persistent `npm run simulate` process is needed on serverless.
+- **Password gate** — set `APP_PASSWORD` and every page/API redirects to `/login`
+  until the visitor authenticates (signed httpOnly cookie; enforced in `src/proxy.ts`).
+  Leave `APP_PASSWORD` unset and the app stays open (local dev).
+
+Full secure setup — scoped DB user, Helios firewall, TLS, keeping `price_ticks`
+bounded, and 24/7 options — is in **[DEPLOY.md](DEPLOY.md)**.
+
 ## Running the demo
 
 **1. Connection** — credentials live in `.dbcreds.json` (gitignored). To point at

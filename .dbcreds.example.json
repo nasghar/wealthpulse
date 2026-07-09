@@ -1,0 +1,7 @@
+{
+  "host": "svc-xxxxxxxx-dml.aws-<region>.svc.singlestore.com",
+  "port": 3306,
+  "user": "admin",
+  "password": "REPLACE_WITH_ADMIN_PASSWORD",
+  "database": "wealthpulse"
+}

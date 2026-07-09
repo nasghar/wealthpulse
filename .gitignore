@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# DB credentials (contains password)
+.dbcreds.json
+
+# Analyst API credentials
+.analyst.json
+
+# Claude Code local settings — may contain approved commands with secrets (never commit)
+.claude/settings.local.json

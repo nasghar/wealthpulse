@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://apps.us-east-1.cloud.singlestore.com",
+  "orgId": "REPLACE_WITH_ORG_UUID",
+  "projectId": "REPLACE_WITH_PROJECT_UUID",
+  "apiKey": "REPLACE_WITH_BEARER_JWT"
+}

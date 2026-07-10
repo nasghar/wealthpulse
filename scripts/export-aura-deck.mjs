@@ -95,39 +95,60 @@ function ticks(s, items, x, y, w, color = C.dim) {
   ], { x: MX, y: 5.95, w: 12, h: 0.6, fontSize: 20, fontFace: FONT });
 }
 
-/* ---------- Slide 3 · What powers the demo ---------- */
+/* ---------- Slide 3 · Intelligence, three ways ---------- */
 {
   const s = slide();
-  eyebrow(s, "What you're watching");
-  title(s, [{ text: 'WealthPulse is ', options: { color: C.text } }, { text: 'Embedded Aura', options: { color: C.gold } }, { text: ' on live context.', options: { color: C.text } }], 1.15, 40);
+  eyebrow(s, 'Aura · three offerings, one context engine');
+  title(s, [{ text: 'Your app on SingleStore — now ', options: { color: C.text } }, { text: 'intelligence, three ways.', options: { color: C.gold } }], 1.1, 34);
+  s.addText('Real-time data is the foundation. Put best-in-class intelligence on top — one copy of data, one Domain, one context engine.',
+    { x: MX, y: 1.95, w: 12, h: 0.5, color: C.dim, fontSize: 15, fontFace: FONT, lineSpacingMultiple: 1.3 });
 
-  const by = 2.45, bw = 5.75, bh = 1.35;
-  box(s, MX, by, bw, bh, { line: C.border });
-  s.addText('ONE GOVERNED SINGLESTORE DATABASE', { x: MX + 0.3, y: by + 0.2, w: bw - 0.6, h: 0.3, color: C.gold, bold: true, fontSize: 11, charSpacing: 2, fontFace: FONT });
-  s.addText('Transactions  ·  Analytics  ·  Search  ·  one copy, live', { x: MX + 0.3, y: by + 0.6, w: bw - 0.6, h: 0.6, color: C.dim, fontSize: 14.5, fontFace: FONT });
-
-  const bx2 = MX + bw + 0.35;
-  box(s, bx2, by, bw, bh, { fill: '15161E', line: C.gold });
-  s.addText('SINGLESTORE CONTEXT ENGINE · KNOWLEDGE FABRIC', { x: bx2 + 0.3, y: by + 0.2, w: bw - 0.6, h: 0.3, color: C.gold, bold: true, fontSize: 11, charSpacing: 1.5, fontFace: FONT });
-  s.addText('Business ontology  ·  schema crawling  ·  data sampling  ·  feedback loop  ·  model gateway (BYOK)', { x: bx2 + 0.3, y: by + 0.6, w: bw - 0.6, h: 0.65, color: C.dim, fontSize: 13, fontFace: FONT, lineSpacingMultiple: 1.2 });
-
-  const fy = by + bh + 0.3;
-  box(s, MX, fy, bw * 2 + 0.35, 1.05, { line: C.border });
-  s.addText('ONE CONTEXT ENGINE  →  THREE OFFERINGS', { x: MX + 0.3, y: fy + 0.18, w: 11, h: 0.3, color: C.gold, bold: true, fontSize: 11, charSpacing: 2, fontFace: FONT });
-  s.addText([
-    { text: 'Embedded Aura — in-app Q&A (this demo)', options: { color: C.gold2, bold: true } },
-    { text: '        Aura Copilot — analysts & BI        Aura Code — agents & MCPs', options: { color: C.dim } },
-  ], { x: MX + 0.3, y: fy + 0.55, w: 11.3, h: 0.4, fontSize: 13.5, fontFace: FONT });
-
-  s.addText([
-    { text: 'Not a chatbot bolted onto a database — the ', options: { color: C.muted } },
-    { text: 'intelligence-first', options: { color: C.text, bold: true } },
-    { text: ' center of gravity. Enterprise-grade: ', options: { color: C.muted } },
-    { text: 'multi-tenant, robust RBAC, BYOK, observability, best-in-class accuracy.', options: { color: C.dim, bold: true } },
-  ], { x: MX, y: 6.35, w: 12, h: 0.8, fontSize: 14.5, fontFace: FONT, lineSpacingMultiple: 1.3, valign: 'top' });
+  const cy = 2.75, ch = 2.45, cw = 3.9, gap = 0.3;
+  const offs = [
+    { tag: 'HEADED', tc: 'C4B5FD', h: 'Aura Copilot', p: 'Analysts & BI at analyst.singlestore.com. Dashboards & sharing. Zero build.' },
+    { tag: 'HEADLESS', tc: 'FDBA74', h: 'Embedded Aura', p: 'Natural-language Q&A dropped inside your own app — for application users.' },
+    { tag: 'AGENTS & MCPS', tc: 'A5B4FC', h: 'Aura Code', p: 'Custom apps & agents your developers build — their UX, same Domain.' },
+  ];
+  offs.forEach((o, i) => {
+    const x = MX + i * (cw + gap);
+    box(s, x, cy, cw, ch);
+    s.addText(o.tag, { x: x + 0.28, y: cy + 0.26, w: cw - 0.5, h: 0.3, color: o.tc, bold: true, fontSize: 11, charSpacing: 1.5, fontFace: FONT });
+    s.addText(o.h, { x: x + 0.28, y: cy + 0.66, w: cw - 0.5, h: 0.4, color: C.text, bold: true, fontSize: 18, fontFace: FONT });
+    s.addText(o.p, { x: x + 0.28, y: cy + 1.18, w: cw - 0.5, h: 1.1, color: C.muted, fontSize: 13.5, fontFace: FONT, lineSpacingMultiple: 1.3, valign: 'top' });
+  });
+  s.addText('Shared SingleStore context engine · one governed database · live data',
+    { x: MX, y: 5.45, w: 12, h: 0.4, color: C.muted, fontSize: 13, fontFace: FONT });
 }
 
-/* ---------- Slide 4 · Value + close ---------- */
+/* ---------- Slide 4 · One Domain, three layers ---------- */
+{
+  const s = slide();
+  eyebrow(s, 'The Domain — your moat');
+  title(s, [{ text: 'One ', options: { color: C.text } }, { text: 'Domain.', options: { color: C.gold } }, { text: ' Three layers.', options: { color: C.text } }], 1.1, 38);
+  s.addText('A logical grouping of a business subject area — shared by all three offerings.',
+    { x: MX, y: 1.95, w: 12, h: 0.4, color: C.dim, fontSize: 15, fontFace: FONT });
+
+  const cy = 2.75, ch = 2.35, cw = 3.9, gap = 0.3;
+  const layers = [
+    { n: '1', h: 'SingleStore expertise', p: 'Knows how to write best-in-class SingleStore SQL & applications.' },
+    { n: '2', h: 'Business ontology', p: 'Captures your business rules & vocabulary — your metrics, your definitions.' },
+    { n: '3', h: 'Technical semantic', p: 'Auto-derived from your schema & kept current as your data evolves.' },
+  ];
+  layers.forEach((l, i) => {
+    const x = MX + i * (cw + gap);
+    box(s, x, cy, cw, ch);
+    s.addText([{ text: l.n + '   ', options: { color: C.gold, bold: true } }, { text: l.h, options: { color: C.text, bold: true } }],
+      { x: x + 0.28, y: cy + 0.28, w: cw - 0.5, h: 0.4, fontSize: 16, fontFace: FONT });
+    s.addText(l.p, { x: x + 0.28, y: cy + 0.86, w: cw - 0.5, h: 1.3, color: C.muted, fontSize: 13.5, fontFace: FONT, lineSpacingMultiple: 1.3, valign: 'top' });
+  });
+  s.addText([
+    { text: 'Same model, same data — the ', options: { color: C.dim } },
+    { text: 'Domain is the difference.', options: { color: C.gold2, bold: true } },
+    { text: ' Context is the moat.', options: { color: C.dim } },
+  ], { x: MX, y: 5.4, w: 12, h: 0.5, fontSize: 18, fontFace: FONT });
+}
+
+/* ---------- Slide 5 · Value + close ---------- */
 {
   const s = slide();
   eyebrow(s, 'What it means for you');
@@ -154,4 +175,4 @@ function ticks(s, items, x, y, w, color = C.dim) {
 }
 
 await pptx.writeFile({ fileName: OUT });
-console.log('wrote', OUT, '· 4 slides (editable)');
+console.log('wrote', OUT, '· 5 slides (editable)');

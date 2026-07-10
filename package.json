@@ -11,7 +11,8 @@
     "seed": "node scripts/seed.mjs",
     "setup": "node scripts/schema.mjs && node scripts/seed.mjs",
     "simulate": "node scripts/simulate.mjs",
-    "deck:pptx": "node scripts/export-pptx.mjs"
+    "deck:pptx": "node scripts/export-pptx.mjs",
+    "deck:aura:pptx": "node scripts/export-aura-deck.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

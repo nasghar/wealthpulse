@@ -98,11 +98,14 @@ demoing *the moat from the keynote, running.*
   - **Version-controlled, observable, BYOK, billing/chargeback** — built in, not bolted on.
 - 🎤 **Mic drop:** "The analyst can only ever touch what it's granted — enforced in the **database** and the **context engine**, not by hoping a prompt behaves."
 
-**Beat 10 · Versatility — *one context engine, three offerings*** 
-- **Say:** "What you're seeing is **Embedded Aura** (headless). Same governed database and context engine also power **Aura Copilot** — the headed experience for your analysts and BI users — and **Aura Code** for your developers and agents/MCPs. One brain, three personas."
-- **Do:** Open the sidecar over **Risk**, then **Blotter** — "it travels with the user, in-context, everywhere."
+**Beat 10 · Versatility — *one context engine, three offerings*** *(the money beat)*
+- **Say:** "Everything so far was **Embedded Aura** — headless Q&A dropped inside our app. Same database, same domain, same RBAC also power two more surfaces."
+- **Do — show the third pillar live:** in the left sidebar click **"Wealth Intelligence — Powered by Aura Code."** A full **standalone analyst workbench** opens — ChatGPT-style, with **chat history on the left**, a **WealthAdvisorContext** selector, and the greeting *"Hi, how can I help you with your data?"*
+  - Ask one question (e.g. `Who are our top 5 advisors by AUM?`) — watch it think, stream, and chart, **exactly like the sidecar**.
+  - Point at the **history rail**: "Persistent conversations, like Aura Copilot for your analysts."
+- **Say:** "Two different surfaces — the **embedded sidecar** and this **standalone workbench** — built by developers with **Aura Code**, both on the **same single copy of data, one context/domain, one set of RBAC rules.** That's *three offerings, one context engine.*"
 - **Say (open / no lock-in):** "And it **meets you where you are** — works over your Iceberg lakehouse, Snowflake, Databricks. No rip-and-replace; your governed lakehouse stays the source of truth."
-- 🎤 **Mic drop:** "One **governed** context engine — embed it **anywhere your users already work.** Build once, deploy the intelligence everywhere."
+- 🎤 **Mic drop:** "One governed brain — **one copy of data, one context, one RBAC** — surfaced as an embedded sidecar, a full analyst workbench, or a developer agent. Build once, deploy the intelligence **anywhere your users already work.**"
 
 **Closing line (straight from the keynote):**
 > "The winners of the agentic era won't have the most models. They'll have the

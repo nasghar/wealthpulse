@@ -40,6 +40,17 @@ export function Sidebar() {
       </nav>
 
       <div className="mt-auto flex flex-col gap-2">
+        <Link href="/intelligence"
+          className="flex items-center gap-2.5 p-3 rounded-xl transition"
+          style={{ border: '1px solid rgba(168,85,247,.32)', background: 'rgba(168,85,247,.1)' }}>
+          <span className="w-7 h-7 rounded-lg grid place-items-center shrink-0" style={{ background: 'rgba(168,85,247,.18)' }}>
+            <svg width="15" height="15" viewBox="0 0 100 100" aria-hidden><defs><radialGradient id="sb-aura" cx="50%" cy="45%" r="65%"><stop offset="0%" stopColor="#ffd6f4"/><stop offset="42%" stopColor="#e879f9"/><stop offset="100%" stopColor="#7c3aed"/></radialGradient></defs><path d="M50 3 C54 30 70 46 97 50 C70 54 54 70 50 97 C46 70 30 54 3 50 C30 46 46 30 50 3 Z" fill="url(#sb-aura)"/></svg>
+          </span>
+          <span className="min-w-0">
+            <span className="block text-[13px] font-semibold text-[#e9d5ff] leading-none">Wealth Intelligence</span>
+            <span className="block text-[10.5px] text-[var(--muted)] mt-1 leading-none">Powered by Aura Code</span>
+          </span>
+        </Link>
         <a href="/deck.html" target="_blank" rel="noreferrer"
           className="card p-3 text-[11px] text-[var(--muted)] hover:border-[var(--border-strong)] transition flex items-center gap-2">
           <FileText size={14} className="text-[var(--gold)]" />
